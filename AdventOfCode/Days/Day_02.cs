@@ -7,11 +7,11 @@ public sealed class Day02 : CustomDirBaseDay
     public Day02()
     {
         var textInput = File.ReadAllLines(InputFilePath);
-        _input = textInput.Select(line =>
-        {
-            var splatLine = line.Split(" ");
-            return new Command(splatLine[0], Convert.ToInt32(splatLine[1]));
-        }).ToArray();
+        _input = (
+            from line in textInput
+            let splatLine = line.Split(" ")
+            select new Command(splatLine[0], Convert.ToInt32(splatLine[1]))
+        ).ToArray();
     }
 
     private record Command(string Action, int Value);

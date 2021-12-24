@@ -4,7 +4,7 @@
         Solver.SolveLast(new SolverConfiguration { ClearConsole = false });
         break;
     case 1 when args[0].Contains("all", StringComparison.CurrentCultureIgnoreCase):
-        Solver.SolveAll(new SolverConfiguration { ShowConstructorElapsedTime = true, ShowTotalElapsedTimePerDay = true });
+        Solver.SolveAll(new SolverConfiguration { ShowConstructorElapsedTime = true, ShowTotalElapsedTimePerDay = true});
         break;
     default:
     {

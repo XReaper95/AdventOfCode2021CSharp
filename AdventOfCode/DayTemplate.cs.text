@@ -1,13 +1,12 @@
 ﻿namespace AdventOfCode.Days;
 
-public sealed class Day0X : CustomDirBaseDay
+public sealed class DayXX : CustomDirBaseDay
 {
-    private readonly int[] _input;
+    private readonly string[] _input;
     
-    public Day0X()
+    public DayXX()
     {   
-        var textInput = File.ReadAllLines(InputFilePath);
-        _input = null;
+        _input = File.ReadAllLines(InputFilePath);
     }
 
     public override ValueTask<string> Solve_1() => new("Solution 1");
